@@ -29,4 +29,19 @@ public class PlayerScript : MonoBehaviour
     {
         rb.linearVelocityX = _moveDirection.x * moveSpeed;
     }
+
+    public void AddScore(int points)
+    {
+        score += points;
+    }
+
+    public void AddLives(int lives)
+    {
+        lives += lives;
+    }
+
+    public void RemoveLives(int lives)
+    {
+        lives -= lives;
+    }
 }

@@ -8,7 +8,6 @@ public class StageScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         // Spawning Blocks
         for (int i = 0; i < 8; i++)
         {
@@ -20,7 +19,6 @@ public class StageScript : MonoBehaviour
         }
 
         // Spawn ball
-
         SpawnEntity(ball, new Vector2(0f, -2f));
     }
 
@@ -30,7 +28,7 @@ public class StageScript : MonoBehaviour
         
     }
 
-    void SpawnEntity(GameObject entity, Vector2 position)
+    public void SpawnEntity(GameObject entity, Vector2 position)
     {
         Instantiate(entity, position, Quaternion.identity);
     }

@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class KillPlaneScript : MonoBehaviour
 {
+    public PlayerScript player;
+    public StageScript stage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        player = GetComponent<PlayerScript>();
+        stage = GetComponent<StageScript>();
     }
 
     // Update is called once per frame
@@ -21,6 +24,7 @@ public class KillPlaneScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Debug.Log("The ball was destroyed!");
+            player.RemoveLives(1);
         }
     }
 }
